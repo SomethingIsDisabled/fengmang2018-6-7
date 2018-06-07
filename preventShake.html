@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>橄榄型尝试</title>
+</head>
+<body>
+	<div id="d1" onclick="ccc()"></div>
+	<div id="d2" onclick="ccc()"></div>
+	<div id="d3" onclick="ccc()"></div>
+</body>
+</html>
+
+<style type="text/css">
+div{
+	margin:50px 0;
+	float:left;
+	background-color:red;
+}
+#d1{
+	width:16px;
+	height:150px;
+	border-top-left-radius:50%;
+	border-bottom-left-radius:50%;
+}
+#d2{
+	width:150px;
+	height:150px;
+}
+</style>
+
+<script>
+	function preventShake(){
+		console.log("pre")
+		var timer=null;
+		return function(){
+			let context=this,args=arguments;
+			console.log(timer);
+			if(timer) clearTimeout(timer);
+			timer=setTimeout(function(){
+				console.log(timer,"timer")
+			},2000)
+		}
+	}
+    let ccc=preventShake();
+</script>
