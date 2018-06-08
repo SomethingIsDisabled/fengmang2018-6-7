@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cityFormat</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript" src="cn_city_code_2018.js"></script>
+<script type="text/javascript">
+	console.log(citys);
+	var cin={};
+	for(var k in citys){
+		cin[citys[k].name]={};
+		for(var k1 in citys[k].child){
+			// citys[k].child[k1].name=citys[k].child[k1].name=="市辖区"?citys[k].name:citys[k].child[k1].name;
+			cin[citys[k].name][citys[k].child[k1].name]=[];
+			for(var k2 in citys[k].child[k1].child){
+                cin[citys[k].name][citys[k].child[k1].name].push(citys[k].child[k1].child[k2]);
+			}
+		}
+	}
+	console.log(cin);
+	document.write(JSON.stringify(cin));
+
+	//递归
+	var names={};
+	function getName(obj){
+		if(typeof obj=="object"){
+			for(var k in obj){
+				names[obj[k].name]={};
+				getName(obj[k].child);
+			}
+		}
+	}
+	// getName(citys);
+	console.log(names);
+</script>
