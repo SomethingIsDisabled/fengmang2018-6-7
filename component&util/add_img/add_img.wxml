@@ -1,0 +1,16 @@
+<!--components/add_img/add_img.wxml-->
+
+<view class="add_image_con" style="{{scroll==true?('overflow:scroll;height:'+box_height):''}}">
+  <view wx:for="{{img_temp_list}}" wx:key="" class="add_image_box {{(index+1)%pre_num!=0?'img_box_left':''}}" style="height:{{height}};width:{{img_width}}">
+    <image src="{{item}}"></image>
+    <view class="del_img_box" data-img_index="{{index}}" bindtap="delIamge">
+      <view class="cross_row"></view>
+      <view class="cross_column"></view>
+    </view>
+  </view>
+  <!-- 添加框 -->
+  <view class="add_box" style="height:{{height}};width:{{img_width}}" wx:if="{{img_temp_list.length<total}}" bindtap="_chooseImg">
+    <view class="row_line" style="border-color:{{plus_color}}"></view>
+    <view class="column_line" style="border-color:{{plus_color}}"></view>
+  </view>
+</view>

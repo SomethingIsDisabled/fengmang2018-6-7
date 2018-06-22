@@ -1,0 +1,72 @@
+/* components/add_img/add_img.wxss */
+/* 选择框 */
+image{
+  width:100%;
+  height:100%;
+}
+.add_box{
+  position:relative;
+  /* border-radius:12rpx; */
+  outline:1rpx dashed #5A5657;
+   overflow:hidden; 
+}
+
+.row_line{
+  position:absolute;
+  border-top:8rpx solid #716F6F;
+  margin-top:-4rpx;
+  width:40%;
+  top:50%;
+  left:30%;
+}
+.column_line{
+  position:absolute;
+  border-right:8rpx solid #716F6F;
+  margin-left:-4rpx;
+  height:40%;
+  left:50%;
+  top:30%;
+}
+/* 图片预览 */
+.add_image_con{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: flex-start;
+  background-color:transparent;
+}
+.add_image_box{
+  position:relative;
+  margin-bottom:15rpx;
+}
+.img_box_left{
+  margin-right:2%;
+}
+/* 删除按钮 */
+.del_img_box{
+  width:40rpx;
+  height:40rpx;
+  transform: rotate(45deg);
+  background-color:rgba(0,0,0,0.6);
+  opacity:0.8;
+  border-radius:50%;
+  overflow:hidden; 
+  position:absolute;
+  right:0;
+  top:0;
+}
+.cross_row{
+  position:absolute;
+  border-bottom:4rpx solid #F2522E;
+  width:70%;
+  right:15%;
+  top:50%;
+  margin-top:-2rpx;
+}
+.cross_column{
+  position:absolute;
+  border-right:4rpx solid #F2522E;
+  height:70%;
+  right:50%;
+  top:15%;
+  margin-right:-2rpx;
+}
