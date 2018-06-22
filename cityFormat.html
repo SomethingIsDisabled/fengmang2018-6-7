@@ -42,7 +42,8 @@
       	// console.log(newReg(i));
       	let r=str.match(newReg(i));
       	// console.log(r);
-      	formatArea(i,r);
+      	// formatArea(i,r);
+        formatAreaWithCode(i,r);
       }
     }
 
@@ -50,6 +51,7 @@
 
     //格式化省市区数组
     let oc={};
+    //纯中文
     function formatArea(pi,arr){
     	let pr="",cr=[],crl=0;
     	if(!Array.isArray(arr)){return;}
@@ -58,12 +60,13 @@
     		// console.log(v.slice(0,6),pi+"0000");
     		if(v.slice(0,6)==pi+"0000"){
 	         	pr=pi+v.match(reg_cn).toString();
-	         	// pr=v.toString();
+	         	// pr=v;
 	    	    oc[pr]={};
         //取市
     		}else if(v.slice(4,6)=="00"){
     			// console.log(v);
     			cr.push(v.match(reg_cn).toString());
+          // cr.push(v)
     			// console.log(pr,oc[pr]);
     			oc[pr][cr[crl]]=[];
     			crl++;
@@ -73,14 +76,65 @@
     			// console.log(cr,crl,v.charAt(3));
   				if(v.slice(4,6)!="00"){
   					oc[pr][cr[crl-1]].push(v.match(reg_cn).toString());
+            // oc[pr][cr[crl-1]].push(v);
   				}
     		}
     	})
     	// console.log(oc);
     }
+    //带编号
+    let or=[],crl=-1;
+    function formatAreaWithCode(pi,arr){
+      let pr="",cr=[],crl1=-1;
+      if(!Array.isArray(arr)){return;}
+      arr.forEach(v=>{
+        //取省
+        // console.log(v.slice(0,6),pi+"0000");
+        if(v.slice(0,6)==pi+"0000"){
+            pr=v.match(reg_cn).toString();
+            // pr=v;
+            or.push({
+              code:v.slice(0,6),
+              name:pr,
+              child:[]
+            });
+            crl++;
+            crl1=-1;
+            // console.log(crl);
+            // console.log(or);
+        //取市
+        }else if(v.slice(4,6)=="00"){
+          // console.log(v);
+          // console.log(or,crl,or[crl]);
+          or[crl].child.push({
+            code:v.slice(0,6),
+            name:v.match(reg_cn).toString(),
+            child:[]
+          });
+          crl1++;
+          // console.log(or,crl);
+        //取区
+        }else{
+          // console.log(cr,crl,v.charAt(3));
+          if(v.slice(4,6)!="00"){
+            or[crl].child[crl1].child.push({
+              code:v.slice(0,6),
+              name:v.match(reg_cn).toString()
+            })
+
+            // console.log(or);
+            return;
+          }
+        }
+      })
+      // console.log(or);
+    }
     format1(str);
-    console.log(oc);
-    document.write(JSON.stringify(oc));
+    // console.log(oc);
+    // document.write(JSON.stringify(oc));
+
+    console.log(or);
+    document.write(JSON.stringify(or));
 
 
 
