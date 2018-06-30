@@ -1,0 +1,17 @@
+/* components/myswiper/myswiper.wxss */
+.banner_img{
+  width:100%;
+  height:100%;
+  transition: all 1s;
+}
+swiper-item{
+  background-color:#f9f9f9;
+}
+.vbv{
+  visibility: visible;
+  opacity: 1;
+}
+.vbh{
+  visibility: hidden;
+  opacity: 0;
+} 

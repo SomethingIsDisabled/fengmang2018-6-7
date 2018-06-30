@@ -1,0 +1,78 @@
+/* components/ipt_model/ipt_model.wxss */
+.win-con{
+  position:fixed;
+  left:0;
+  top:0;
+  z-index:200;
+  background-color:rgba(0,0,0,.6);
+  color:#333;
+  transition:all .5s;
+}
+.vbv{
+  visibility: visible;
+  height:100%;
+  width:100%;
+  opacity:1;
+}
+.vbh{
+  visibility: hidden;
+  height:0;
+  width:0;
+  opacity:0;
+}
+.win-inner{
+  background-color:#fff;
+  width:80%;
+  max-height:80%;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+}
+.w-title{
+  margin:20rpx 3% 0 4%;
+  text-align: center;
+  font-size:32rpx;
+  font-weight: bold;
+}
+.w-discription{
+  margin:20rpx 3% 0 4%;
+  font-size:28rpx;
+}
+.w-ipt{
+  border:1rpx solid #999;
+  margin:20rpx 3% 0 4%;
+  border-radius:10rpx;
+  font-size:30rpx;
+}
+.w-ipt input{
+  padding:0 20rpx;
+}
+.w-ipth{color:#ccc;}
+.w-btn{
+  display: flex;
+  border-top:1rpx solid #999;
+  margin-top:40rpx;
+}
+.w-btn button{
+  background-color:#fff;
+  font-size:34rpx;
+  line-height:2em;
+  width:100%;
+  border-radius:0;
+}
+button::after{
+  border:none;
+}
+.w-btn-confirm{
+  color:#35CE74;
+}
+.w-btn-canel{
+  border-right:1rpx solid #999;
+}
+.w-btn .w-btnh-canel{
+  background-color:#f4f4f4;
+}
+.w-btn .w-btnh-confirm{
+  background-color:#f4f4f4;
+}

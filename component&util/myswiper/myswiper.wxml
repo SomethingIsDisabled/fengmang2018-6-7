@@ -1,0 +1,8 @@
+<!--components/myswiper/myswiper.wxml-->
+<swiper autoplay="1" indicator-dots="1" circular="1" indicator-active-color="{{indicator}}" style="height:{{height}}">
+  <block wx:for="{{imgs}}" wx:key="banner_{{index}}">
+    <swiper-item>
+      <image src="{{item}}" class="banner_img {{item&&img_loaded[index]?'vbv':'vbh'}}" binderror='bannerError' data-index="{{index}}" bindload='imgLoaded'></image>
+    </swiper-item>
+  </block>
+</swiper>

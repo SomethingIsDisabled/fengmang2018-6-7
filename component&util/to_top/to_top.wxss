@@ -1,0 +1,35 @@
+/* components/to_top/to_top.wxss */
+
+/* 置顶 */
+.to_top{
+  position:fixed;
+  z-index:11;
+  /* bottom:20rpx; */
+  right:40rpx;
+  width:80rpx;
+  height:80rpx;
+  opacity: 0.8;
+  transition:all 0.5s;
+}
+.to_top image{
+  width:100%;
+  height:100%;
+}
+.dtp{
+  transform:rotate(180deg);
+  opacity: .5;
+}
+.press_top{
+  background-color:rgba(0,0,0,0.3);
+}
+.vbh{
+  visibility: hidden;
+  opacity: 0;
+}
+.vbv{
+  visibility: visible;
+  opacity: 1;
+}
+.dpn{
+  display:none;
+}

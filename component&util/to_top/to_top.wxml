@@ -1,0 +1,5 @@
+<!--components/to_top/to_top.wxml-->
+<view class="to_top {{is_show==1?'vbv':is_show==2?'dpn':'vbh'}}" bindtap="_toTop" hover-class='press_top' style="bottom:{{bottom}}rpx;">
+  <image src="{{img}}" binderror="_iconError" wx:if="{{!icon_error}}"></image>
+  <icon type="download" class="dtp" color="rgb(0,0,0)" size="40" wx:else></icon>
+</view>

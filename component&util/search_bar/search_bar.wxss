@@ -1,0 +1,46 @@
+/* components/seach_bar/search_bar.wxss */
+/* 搜索栏 */
+.search_con{
+  display:flex;
+  background-color:#fff;
+  box-shadow: 0 0 5rpx 2rpx #ddd;
+}
+.se_ipt_box{
+  flex:5;
+  background-color: #fff;
+  margin:0 20rpx;
+  display: flex;
+  align-items:center;
+}
+.se_ipt_box input{
+  flex:1;
+  font-size:32rpx;
+  display:inline-block;
+  background-color:#fff;
+  vertical-align: top;
+  border-radius: 15rpx;
+  padding-left:2%;
+  margin:10rpx;
+}
+.ph_search{
+  color:#C4C4C4;
+  letter-spacing: 5rpx;
+}
+.se_btn_box{
+  flex:1;
+}
+.nuoda_btn{
+  background-color:#F0AD54;
+}
+.nuoda_btnh{
+  background-color:#f2b86b;
+} 
+.se_btn{
+  margin-top:5rpx;
+  display:inline-block;
+  font-size:30rpx;
+  line-height:2.2em;
+  padding:0 18rpx;
+  border-radius:10rpx;
+  color:#fff;
+}

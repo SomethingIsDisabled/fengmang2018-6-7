@@ -1,0 +1,11 @@
+<!--components/seach_bar/search_bar.wxml-->
+<view class="search_con">
+  <view class="se_ipt_box">
+    <image wx:if="{{icon}}" src="{{icon}}" style="width:{{icon_size*2}}rpx;height:{{icon_size*2}}rpx;"></image>
+    <icon wx:else type="search" size="{{icon_size}}"></icon>
+    <input bindinput='matchWord' maxlength='15' value="{{s_word}}" placeholder='搜索' placeholder-class='ph_search'></input>
+  </view>
+  <view class="se_btn_box" hidden="{{hide_btn}}">
+    <view class="se_btn nuoda_btn" hover-class='nuoda_btnh' bindtap="search" data-title="1">搜索</view>
+  </view>
+</view>

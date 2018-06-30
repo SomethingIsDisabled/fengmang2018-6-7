@@ -1,0 +1,16 @@
+<!--components/ipt_model/ipt_model.wxml-->
+<view class="win-con {{is_hide?'vbh':'vbv'}}" bindtap="hideModel" catchtouchmove="rf">
+  <view class="win-inner" catchtap="rf">
+    <form bindsubmit='formSubmit'>
+      <view class="w-title">{{title}}</view>
+      <view class="w-discription">{{discription?(discription+'：'):""}}</view>
+      <view class="w-ipt">
+        <input placeholder='{{placeholder}}' name="s_word" type="{{btn_type}}" placeholder-class='w-ipth' value="{{s_word}}"></input>
+      </view>
+      <view class="w-btn">
+        <button class="w-btn-canel" hover-class="w-btnh-canel" bindtap="hideModel">取消</button>
+        <button class="w-btn-confirm" hover-class='w-btnh-confirm' form-type='submit'>搜索</button>
+      </view>
+    </form>
+  </view>
+</view>
