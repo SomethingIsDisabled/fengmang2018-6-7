@@ -3,8 +3,8 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
-//价格运算
-const priceMultiply=(a,b)=>((a*100)*(b*100)+.5|0)/10000;
+//价格抹零
+const priceMultiply=(a,b)=>(a*b*100+.5|0)/100;
 //去掉多余空白
 const deleteSpace=d=>{
   if(!d){return "";}
