@@ -1,0 +1,21 @@
+/* components/arrows/arrows.wxss */
+/* 空心右箭头 */
+.arrow_box{
+  /* margin:7rpx 20rpx 0 35rpx;   */
+  position:relative;  
+}
+.arrow_right1,.arrow_right2{
+  width:0;
+  height:0;
+  border-style:solid;
+  position:absolute;
+  background:transparent;
+}
+.arrow_right1{
+  border-color:transparent transparent transparent #999;
+  z-index:1;  
+}
+.arrow_right2{
+  border-color:transparent transparent transparent #fff;
+  z-index:2;  
+}

@@ -1,0 +1,22 @@
+<!--components/arrows/arrows.wxml-->
+<!-- <view>箭头组件</view> -->
+<!-- 右箭头 -->
+<view class="arrow_box" wx:if="{{direction=='right'}}" style="margin-top:{{margin_top}};">
+  <view class="arrow_right1" style="border-width:{{size}} 0 {{size}} {{size}};left:{{bold}};border-color:transparent transparent transparent {{color}};"></view>
+   <view class="arrow_right2" style="border-width:{{size}} 0 {{size}} {{size}};border-color:transparent transparent transparent {{bg_color}};left:0;" wx:if="{{type=='hollow'}}"></view> 
+</view>
+<!-- 左箭头 -->
+<view class="arrow_box" wx:if="{{direction=='left'}}" style="margin-top:{{margin_top}}">
+  <view class="arrow_right1" style="border-width:{{size}} {{size}} {{size}} 0;border-color:transparent {{color}} transparent transparent;border-right-color:{{color}};left:0;"></view>
+   <view class="arrow_right2" style="border-width:{{size}} {{size}} {{size}} 0;border-color:transparent {{bg_color}} transparent transparent;left:{{bold}};" wx:if="{{type=='hollow'}}"></view> 
+</view>
+<!-- 下箭头 -->
+<view class="arrow_box" wx:if="{{direction=='down'}}" style="margin-top:{{margin_top}}">
+  <view class="arrow_right1" style="border-width:{{size}} {{size}} 0 {{size}};border-color:{{color}} transparent transparent transparent;top:{{bold}};left:{{left}}"></view>
+   <view class="arrow_right2" style="border-width:{{size}} {{size}} 0 {{size}};border-color:{{bg_color}} transparent transparent transparent;top:0;" wx:if="{{type=='hollow'}}"></view> 
+</view>
+<!-- 上箭头 -->
+<view class="arrow_box" wx:if="{{direction=='up'}}" style="margin-top:{{margin_top}}">
+  <view class="arrow_right1" style="border-width:0 {{size}} {{size}} {{size}};border-color:transparent transparent {{color}} transparent;bottom:{{bold}};left:{{left}}"></view>
+   <view class="arrow_right2" style="border-width:0 {{size}} {{size}} {{size}};border-color:transparent transparent {{bg_color}} transparent;bottom:0;" wx:if="{{type=='hollow'}}"></view> 
+</view>

@@ -1,0 +1,23 @@
+<!--components/check_in_time/check_in_time.wxml-->
+     <view class="check_in_box" style="font-size:{{f_size}}" bindtap="getNow">
+        <view>
+          <view class="check_title" style="color:{{color1}}">入住日期</view>
+          <picker mode="date" value="" start="{{check_in_s}}" end="{{check_in_e}}" bindchange="bindStartDate">
+            <view class="picker" style="color:{{color2}}">
+              {{check_in_f}}
+            </view>
+          </picker>
+        </view>
+        <view>
+          <view class="check_title" style="color:{{color1}}">共{{check_data.check_all}}晚</view>
+          <view class="sep_box"><text class="border" style="color:{{color1}}">|</text></view>
+        </view>
+        <view>
+          <view class="check_title" style="color:{{color1}};">离店日期</view>
+          <picker mode="date" value="" start="{{check_out_s}}" end="{{check_out_e}}" bindchange="bindEndDate">
+            <view class="picker" style="color:{{color2}}">
+              {{check_out_f}}
+            </view>
+          </picker>
+        </view>
+      </view>

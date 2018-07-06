@@ -1,0 +1,19 @@
+/* components/check_in_time/check_in_time.wxss */
+.check_in_box{
+  display:flex;
+}
+.check_in_box view{
+  flex:1;
+  text-align:center;
+}
+.sep_box,.picker{
+  margin-top:14rpx;
+}
+.picker{
+  width:100%;
+  min-height:50rpx;
+  font-weight: bold;
+}
+.border{
+  font-size:16rpx;
+}
