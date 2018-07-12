@@ -10,7 +10,7 @@ const deleteSpace=d=>{
   if(!d){return "";}
   d=d.replace(/^\s+/,"");
   d = d.replace(/\s+$/, "");
-  d=d.replace(/\n\n+/gi,"\n");
+  d=d.replace(/\n\n+/g,"\n");
   return d;
 }
 //限制一个空格
@@ -18,15 +18,13 @@ const deleteSpaceI = d => {
   if (!d) { return ""; }
   d = d.replace(/^\s+/, "");
   d = d.replace(/\s+$/, "");
-  d = d.replace(/\s+/gi, " ");
+  d = d.replace(/\s+/g, " ");
   return d;
 }
 //去掉全部空格
 const deleteSpaceA = d => {
   if (!d) { return ""; }
-  d = d.replace(/^\s+/, "");
-  d = d.replace(/\s+$/, "");
-  d = d.replace(/\s+/gi, "");
+  d = d.replace(/\s+/g, "");
   return d;
 }
 const testTelephone=d=>{
